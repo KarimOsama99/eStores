@@ -71,17 +71,28 @@ img {
         border: none;
     }
 }
-@media (min-width: 409px) and (max-width: 767px) {
+@media (min-width: 392px) and (max-width: 519px) {
     .progress ul.progress-steps li:not(:last-child)::before {
         content: '';
         position: absolute;
         left: 20px;
-        top: 20px;
+        top: 23px;
         width: 105px;
         height: 2px;
         background-color: var(--lighter);
     }
 }
+ @media (min-width: 520px) and (max-width:767px) {
+      .progress ul.progress-steps li:not(:last-child)::before {
+        content: '';
+        position: absolute;
+        left: 20px;
+        top: 23px;
+        width: 167px !important;
+        height: 2px;
+        background-color: var(--lighter);
+      }
+    }
 /* Progress */
 .form-box .progress {
     position: relative;
@@ -108,8 +119,8 @@ img {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-    gap: 3em;
+    justify-content: space-around;
+    gap: 2em;
 }
 .progress ul.progress-steps li {
     position: relative;
@@ -307,7 +318,7 @@ form > .form-three .bg-svg {
     .progress ul.progress-steps li:not(:last-child)::before {
         content: '';
         position: absolute;
-        left: 20px;
+        left: 23px;
         top: 30px;
         width: 2px;
         height: 65px;

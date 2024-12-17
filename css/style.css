@@ -305,7 +305,8 @@ h6,
 
   .carousel-caption h1 {
     font-size: 30px;
-    font-weight: 600 !important;
+    font-weight: 700 !important;
+    margin-bottom: 1em;
   }
 }
 
