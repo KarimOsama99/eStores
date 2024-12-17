@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Store Journey</title>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="page" class="site">
+        <div class="container">
+            <div class="form-box">
+                <div class="progress">
+                    <div class="logo"><a href="../index.html"><img src="../img/logo2.png" alt="logo"></a></div>
+                    <ul class="progress-steps">
+                        <li class="step active">
+                            <span>1</span>
+                            <p>Store Details<br><span>60 secs to complete</span></p>
+                        </li>
+                        <li class="step">
+                            <span>2</span>
+                            <p>Add Product<br><span>60 secs to complete</span></p>
+                        </li>
+                        <li class="step">
+                            <span>3</span>
+                            <p>ِActivate Shipping<br><span>30 secs to complete</span></p>
+                        </li>
+                        <li class="step">
+                            <span>4</span>
+                            <p>ِPayment Gates<br><span>25 secs to complete</span></p>
+                        </li>
+                    </ul>
+                </div>
+                <form action="">
+                    <div class="form-one form-step active">
+                        <!-- <div class="bg-svg"></div> -->
+                        <h2>Add your store information</h2>
+                        <p>Start by adding your store information and identity as you would like it to appear to your customers. You can edit all the information here later.</p>
+                        
+                        <!-- Upload Area -->
+                        <div id="uploadArea" class="upload-area">
+                        <!-- Header -->
+                        <div class="upload-area__header">
+                            <h1 class="upload-area__title">Store Logo</h1>
+                            <p class="upload-area__paragraph">
+                            File should be an image
+                            <strong class="upload-area__tooltip">
+                                Like
+                                <span class="upload-area__tooltip-data"></span> <!-- Data Will be Comes From Js -->
+                            </strong>
+                            </p>
+                        </div>
+                        <!-- End Header -->
+
+                        <!-- Drop Zoon -->
+                        <div id="dropZoon" class="upload-area__drop-zoon drop-zoon">
+                            <span class="drop-zoon__icon">
+                            <i class='bx bxs-file-image'></i>
+                            </span>
+                            <p class="drop-zoon__paragraph">Drop your file here or Click to browse</p>
+                            <span id="loadingText" class="drop-zoon__loading-text">Please Wait</span>
+                            <img src="" alt="Preview Image" id="previewImage" class="drop-zoon__preview-image" draggable="false">
+                            <input type="file" id="fileInput" class="drop-zoon__file-input" accept="image/*">
+                        </div>
+                        <!-- End Drop Zoon -->
+
+                        <!-- File Details -->
+                        <div id="fileDetails" class="upload-area__file-details file-details">
+                            <h3 class="file-details__title">Uploaded File</h3>
+
+                            <div id="uploadedFile" class="uploaded-file">
+                            <div class="uploaded-file__icon-container">
+                                <i class='bx bxs-file-blank uploaded-file__icon'></i>
+                                <span class="uploaded-file__icon-text"></span> <!-- Data Will be Comes From Js -->
+                            </div>
+
+                            <div id="uploadedFileInfo" class="uploaded-file__info">
+                                <span class="uploaded-file__name">Proejct 1</span>
+                                <span class="uploaded-file__counter">0%</span>
+                            </div>
+                            </div>
+                        </div>
+                        <!-- End File Details -->
+                        </div>
+                        <!-- End Upload Area -->
+
+                        <div>
+                            <label>Store Name</label>
+                            <input type="text" placeholder="e.g. Salla">
+                        </div>
+                        <div>
+                            <label>Store Link</label>
+                            <input type="text" placeholder="www.goldencoode.com/yourstore.com">
+                        </div>
+                        <div>
+                            <label>Business Activity</label>
+                            <select class="js-example-basic-single" name="state" id="activity">
+                                <option value="" selected disabled>Business Activity</option>
+                                <option value="BA">Jewellery</option>
+                                <option value="MA">Fashion</option>
+                                <option value="VO">Accessories & Gifts</option>
+                                <option value="PH">Educational</option>
+                                <option value="MW">Health</option>
+                                <option value="IN">Books & Arts</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label>Sub Activities</label>
+                            <select class="js-example-placeholder-multiple js-states form-control" multiple="multiple">
+                                <option value="BA">Jewellery</option>
+                                <option value="MA">Fashion</option>
+                                <option value="VO">Women Accessories</option>
+                                <option value="PH">Child Clothes</option>
+                                <option value="MW">Shoes</option>
+                                <option value="IN">Men Belts</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-two form-step">
+                        <!-- <div class="bg-svg"></div> -->
+                        <h2>Add Your First Product</h2>
+                        <p>Start by adding details of the first product you want to display in your store.</p>
+                        <!-- Upload Area -->
+                        <div id="uploadArea" class="upload-area">
+                        <!-- Header -->
+                        <div class="upload-area__header">
+                            <h1 class="upload-area__title">Product Image</h1>
+                            <p class="upload-area__paragraph">
+                            File should be an image
+                            <strong class="upload-area__tooltip">
+                                Like
+                                <span class="upload-area__tooltip-data"></span> <!-- Data Will be Comes From Js -->
+                            </strong>
+                            </p>
+                        </div>
+                        <!-- End Header -->
+
+                        <!-- Drop Zoon -->
+                        <div id="dropZoon" class="upload-area__drop-zoon drop-zoon">
+                            <span class="drop-zoon__icon">
+                            <i class='bx bxs-file-image'></i>
+                            </span>
+                            <p class="drop-zoon__paragraph">Drop your file here or Click to browse</p>
+                            <span id="loadingText2" class="drop-zoon__loading-text">Please Wait</span>
+                            <img src="" alt="Preview Image" id="previewImage2" class="drop-zoon__preview-image" draggable="false">
+                            <input type="file" id="fileInput2" class="drop-zoon__file-input" accept="image/*">
+                        </div>
+                        <!-- End Drop Zoon -->
+
+                        <!-- File Details -->
+                        <div id="fileDetails" class="upload-area__file-details file-details">
+                            <h3 class="file-details__title">Uploaded File</h3>
+
+                            <div id="uploadedFile" class="uploaded-file">
+                            <div class="uploaded-file__icon-container">
+                                <i class='bx bxs-file-blank uploaded-file__icon'></i>
+                                <span class="uploaded-file__icon-text"></span> <!-- Data Will be Comes From Js -->
+                            </div>
+
+                            <div id="uploadedFileInfo" class="uploaded-file__info">
+                                <span class="uploaded-file__name">Proejct 1</span>
+                                <span class="uploaded-file__counter">0%</span>
+                            </div>
+                            </div>
+                        </div>
+                        <!-- End File Details -->
+                        </div>
+                        <!-- End Upload Area -->
+                        <div>
+                            <label>Product Name</label>
+                            <input type="text" placeholder="HD Screen">
+                        </div>
+                        <div>
+                            <label>Product Price</label>
+                            <input type="number" placeholder="0 L.E">
+                        </div>
+                        <div>
+                            <label>Product Quantity</label>
+                            <input type="number" placeholder="1">
+                        </div>
+                    </div>
+                    <div class="form-three form-step">
+                        <!-- <div class="bg-svg"></div> -->
+                        <h2>Choose Shipping Companies</h2>
+                        <p>Activate linking your store to multiple local and international shipping and delivery companies. You will be able to set additional settings such as shipping rates and others later from the control panel</p>
+                        <div class="setting-item">
+                                <label>
+                                    <div class="info">
+                                        <img src="https://via.placeholder.com/50x50?text=J&T" alt="J&T Express">
+                                        <h3>G & T Express</h3>
+                                    </div>
+                                    <input type="checkbox" checked>
+                                    <span class="toggle"></span>
+                                </label>
+                        </div>
+                        <div class="setting-item">
+                                <label>
+                                    <div class="info">
+                                        <img src="https://via.placeholder.com/50x50?text=J&T" alt="J&T Express">
+                                        <h3>DHL Express</h3>
+                                    </div>
+                                    <input type="checkbox" checked>
+                                    <span class="toggle"></span>
+                                </label>
+                        </div>
+                        <div class="setting-item">
+                                <label>
+                                    <div class="info">
+                                        <img src="https://via.placeholder.com/50x50?text=J&T" alt="J&T Express">
+                                        <h3>Aramex</h3>
+                                    </div>
+                                    <input type="checkbox" checked>
+                                    <span class="toggle"></span>
+                                </label>
+                        </div>
+                        <div class="setting-item">
+                                <label>
+                                    <div class="info">
+                                        <img src="https://via.placeholder.com/50x50?text=J&T" alt="J&T Express">
+                                        <h3>Smsa</h3>
+                                    </div>
+                                    <input type="checkbox" checked>
+                                    <span class="toggle"></span>
+                                </label>
+                        </div>
+                    </div>
+                    <div class="form-four form-step">
+                        <!-- <div class="bg-svg"></div> -->
+                        <h2>Activate Payment Mehods</h2>
+                        <p>Enable your customers to pay easily by enabling online payment options. The options will be fully activated after authenticating your store and subscribing to one of the paid basket packages.</p>
+                        <div class="setting-item">
+                                <label>
+                                    <div class="info">
+                                        <img src="https://via.placeholder.com/50x50?text=J&T" alt="J&T Express">
+                                        <h3>Debit Card</h3>
+                                    </div>
+                                    <input type="checkbox" checked>
+                                    <span class="toggle"></span>
+                                </label>
+                        </div>
+                        <div class="setting-item">
+                                <label>
+                                    <div class="info">
+                                        <img src="https://via.placeholder.com/50x50?text=J&T" alt="J&T Express">
+                                        <h3>Paypal</h3>
+                                    </div>
+                                    <input type="checkbox" checked>
+                                    <span class="toggle"></span>
+                                </label>
+                        </div>
+                        <div class="setting-item">
+                                <label>
+                                    <div class="info">
+                                        <img src="https://via.placeholder.com/50x50?text=J&T" alt="J&T Express">
+                                        <h3>Apple Pay</h3>
+                                    </div>
+                                    <input type="checkbox" checked>
+                                    <span class="toggle"></span>
+                                </label>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn-prev" disabled>Back</button>
+                        <button type="button" class="btn-next">Next</button>
+                        <button type="submit" class="btn-submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/select.js"></script>
+</body>
+</html>
